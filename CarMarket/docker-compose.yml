@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  carmarket.api:
+    image: ${DOCKER_REGISTRY-}carmarketapi
+    build:
+      context: .
+      dockerfile: CarMarket.Api/Dockerfile
+
+  users.api:
+    image: ${DOCKER_REGISTRY-}usersapi
+    build:
+      context: .
+      dockerfile: Users.Api/Dockerfile
+
