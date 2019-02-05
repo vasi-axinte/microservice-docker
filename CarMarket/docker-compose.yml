@@ -6,10 +6,25 @@ services:
     build:
       context: .
       dockerfile: CarMarket.Api/Dockerfile
+    expose:
+      - "7000"
+    ports:
+      - "7220:22"
+    networks:
+      main:
+        aliases:
+          - carmarket
 
   users.api:
     image: ${DOCKER_REGISTRY-}usersapi
     build:
       context: .
       dockerfile: Users.Api/Dockerfile
-
+    expose:
+      - "7002"
+    ports:
+      - "7222:22"
+    networks:
+      main:
+        aliases:
+          - users
