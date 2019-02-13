@@ -23,6 +23,9 @@ There are 3 systems:
 ### BPMN
 ![alt text](https://i.imgur.com/mgDNFHl.png)
 
+### BMM
+![alt text](https://i.imgur.com/FImbnXe.png)
+
 ### Patterns
 
 - Authentication Broker - basically we have a separate service that issues tokens to clients and it makes sure that they only users with tokens access the resources available on the server
