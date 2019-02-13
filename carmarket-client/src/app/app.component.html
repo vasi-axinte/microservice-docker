@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <nav>
+    <a class="navigation-button" routerLink="" routerLinkActive="active">Home</a>
+    <a class="navigation-button" *ngIf="isCarsButtonActive()" routerLink="/cars" routerLinkActive="active">Cars</a>
+    <a class="navigation-button" *ngIf="!isCarsButtonActive()" routerLink="/login" routerLinkActive="active">Login</a>
+    <a class="navigation-button" *ngIf="isCarsButtonActive()" routerLink="/" routerLinkActive="active" (click)="logout()">Logout</a>
+
+  </nav>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
