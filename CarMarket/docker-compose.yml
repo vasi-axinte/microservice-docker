@@ -1,39 +1,39 @@
 version: '3.4'
 
 services:
-  carmarket.api:
-    image: ${DOCKER_REGISTRY-}carmarketapi
+  cars:
+    image: ${DOCKER_REGISTRY-}cars
     build:
       context: .
-      dockerfile: CarMarket.Api/Dockerfile
+      dockerfile: Cars/Dockerfile
     environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://+:7000
+    - ASPNETCORE_URLS=http://+:4001
     expose:
-      - "7000"
+      - "4001"
     ports:
-      - "7000:7000"
+      - "4001:4001"
     networks:
       main:
         aliases:
-          - carmarket.api
+          - cars
 
-  users.api:
-    image: ${DOCKER_REGISTRY-}usersapi
+  users:
+    image: ${DOCKER_REGISTRY-}users
     build:
       context: .
-      dockerfile: Users.Api/Dockerfile
+      dockerfile: Users/Dockerfile
     environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://+:7002
+    - ASPNETCORE_URLS=http://+:4002
     expose:
-      - "7002"
+      - "4002"
     ports:
-      - "7002:7002"
+      - "4002:4002"
     networks:
       main:
         aliases:
-          - users.api
+          - users
   
 networks:
   main:

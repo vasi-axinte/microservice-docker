@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>3c8d2b0a-e4d7-48fe-8fdb-8b28c92f7f15</ProjectGuid>
+    <ProjectGuid>0b247b8e-9c7f-4d91-9a08-cd36146fe546</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
-    <DockerServiceName>carmarket.api</DockerServiceName>
+    <DockerServiceName>cars</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
