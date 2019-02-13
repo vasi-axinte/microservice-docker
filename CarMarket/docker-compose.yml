@@ -6,25 +6,34 @@ services:
     build:
       context: .
       dockerfile: CarMarket.Api/Dockerfile
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_URLS=http://+:7000
     expose:
       - "7000"
     ports:
-      - "7220:22"
+      - "7000:7000"
     networks:
       main:
         aliases:
-          - carmarket
+          - carmarket.api
 
   users.api:
     image: ${DOCKER_REGISTRY-}usersapi
     build:
       context: .
       dockerfile: Users.Api/Dockerfile
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_URLS=http://+:7002
     expose:
       - "7002"
     ports:
-      - "7222:22"
+      - "7002:7002"
     networks:
       main:
         aliases:
-          - users
+          - users.api
+  
+networks:
+  main:
