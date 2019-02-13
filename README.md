@@ -12,13 +12,17 @@ This project allows you to:
 - create user account
 - see the list of cars from database
 
+There are 3 systems:
+1. Users API - responsible for authorization (.NET Core WebApi Project)
+2. Cars API - responsible with car management (.NET Core WebApi Project)
+3. Client App (Angular)
+
 ### Project architecture
 ![alt text](https://i.imgur.com/QmWx2aL.png)
 
 ### BPMN
 
 ### Patterns
-
 
 - Authentication Broker - basically we have a separate service that issues tokens to clients and it makes sure that they only users with tokens access the resources available on the server
 
