@@ -21,6 +21,7 @@ There are 3 systems:
 ![alt text](https://i.imgur.com/QmWx2aL.png)
 
 ### BPMN
+![alt text](https://ibb.co/nRghPMZ)
 
 ### Patterns
 
