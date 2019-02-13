@@ -3,8 +3,7 @@ Simple Microservices App with docker support
 
 ## Used patterns:
     - Authentication broker
-    - Adapter
-    - 
+    - Service Façade
 
 ## Details
 
